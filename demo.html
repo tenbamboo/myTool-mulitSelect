@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="./jquery.min.js"></script>
+	<script src="./artTemplate.js"></script>
+	<script src="./jquery.multiSelect.js"></script>
+	<link rel="stylesheet" href="./jquery.multiSelect.css">
+</head>
+<body>
+	<div id="multiSelect">
+	</div>
+	<a id="getSelect">获取选择的</a>
+	<a id="setSource1">设置1</a>
+	<a id="setSource2">设置2</a>
+
+	<script >
+		$(document).ready(function(){
+			$("#multiSelect").multiSelect({
+				height:1,
+				width:1,
+			});
+
+			//test
+		$("#getSelect").click(function(){
+			console.log($("#multiSelect").multiSelect('getSelect'));
+		});
+		$("#setSource1").click(function(){
+			var array=[];
+			var obj={};
+			for(var i=0,l=20;i<l;i++){
+				obj={};
+				obj.mid=i;
+				obj.title='hello'+i;
+				array.push(obj);
+			}
+			$("#multiSelect").multiSelect('setSource',array,1);
+		});
+		$("#setSource2").click(function(){
+			var array=[];
+			for(var i=0,l=20;i<l;i++){
+				array.push(i);
+			}
+			$("#multiSelect").multiSelect('setSource',array,2);
+		});
+		});
+
+	</script>
+
+</body>
+</html>

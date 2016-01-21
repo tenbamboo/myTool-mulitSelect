@@ -1,0 +1,55 @@
+.multiSelect {
+	width: 800px;
+	height: 600px;
+	border: 1px solid black;
+}
+.multiSelect > ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 42.66%;
+	float: left;
+	text-align: center;
+	height: 100%;
+	overflow: auto;
+}
+.multiSelect > ul li {
+	border-bottom: 1px solid #CCBCBC;
+	padding: 6px;
+	cursor: pointer;
+}
+.multiSelect > ul li.select {
+	background-color: #E0E0E0;
+	color: #333;
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.34);
+}
+.multiSelect .sourceSelect {
+	border-right: 2px solid;
+}
+.multiSelect .newSelect {
+	border-left: 2px solid;
+}
+.multiSelect .buttonGroup {
+	width: 14%;
+	float: left;
+	height: 100%;
+	position: relative;
+}
+.multiSelect .buttonGroup > div {
+	position: absolute;
+	top: 50%;
+	margin-top: -70px;
+	width: 100%;
+}
+.multiSelect .buttonGroup > div a {
+	display: block;
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+}
